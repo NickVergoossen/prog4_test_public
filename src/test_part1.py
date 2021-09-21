@@ -70,7 +70,7 @@ def test_product_of_list_4():
 
 def test_price_search_empty():
     articles = []
-    price_search(articles, "Ghost of Tsushima") == None
+    assert price_search(articles, "Ghost of Tsushima") == None
 
 
 def test_price_search():
@@ -80,7 +80,7 @@ def test_price_search():
         ["Ghost of Tsushima", 40],
         ["Red Dead Redemption 2", 45],
     ]
-    price_search(articles, "Ghost of Tsushima") == 40
+    assert price_search(articles, "Ghost of Tsushima") == 40
 
 
 def test_price_search_rdr2():
@@ -90,7 +90,7 @@ def test_price_search_rdr2():
         ["Ghost of Tsushima", 40],
         ["Red Dead Redemption 2", 45],
     ]
-    price_search(articles, "Red Dead Redemption 2") == 45
+    assert price_search(articles, "Red Dead Redemption 2") == 45
 
 
 def test_price_search_not_found():
@@ -100,4 +100,4 @@ def test_price_search_not_found():
         ["Ghost of Tsushima", 40],
         ["Red Dead Redemption 2", 45],
     ]
-    price_search(articles, "Terraria") == None
+    assert price_search(articles, "Terraria") == None
